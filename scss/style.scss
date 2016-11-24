@@ -1,0 +1,316 @@
+@import "mixins";
+@import "media";
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
+.wrapper {
+    overflow: hidden;
+}
+body {
+    position: relative;
+    @include fonts;
+}
+header {
+    .logo02 {
+        display: none;
+    }
+    .burger {
+        display: none;
+    }
+    min-height: 800px;
+    background-image: url(../img/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    text-align: center;
+    .main_nav {
+        li {
+            display: inline-block;
+            padding: 60px 30px;
+    }
+        .logo {
+            vertical-align: middle;
+            padding: 0 30px;
+        }
+        a {
+            @include font(16px, rgba(0, 0, 0, 0.56));
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: 0.5s;
+            &:hover {
+                color: #64c29e;
+            }
+        }
+    }
+}
+.about {
+    img {
+        margin-bottom: 20px;
+    }
+    padding: 115px 50px 50px 50px;
+    text-align: center;
+    p {
+        padding: 0 60px;
+        line-height: 1.5;
+    }
+}
+.work {
+    p {
+        padding: 0 70px;
+        line-height: 1.5;
+    }
+    .big {
+        width: 66.67%;
+        float: left;
+    }
+    .big-02 {
+        width: 66.67%;
+        float: right;
+    }
+    .img-left {
+        float: left;
+        width: 33.33%;
+    }
+    .img-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 33.33%;
+    }
+    .text {
+        @include textClass;
+        float: right;
+    }
+    .text-02 {
+        @include textClass;
+        float: left;
+    }
+    .text-03 {
+        margin: 0 auto;
+        width: 33.33% !important;
+        @include textClass;
+    }
+    .text-04 {
+        display: none;
+    }
+    .row {
+        &:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        position: relative;
+    }
+    .sm {
+        position: absolute;
+        bottom: 0;
+        float: right;
+        width: 33.33%;
+    }
+    .sm-02 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        float: left;
+        width: 33.33%;
+    }
+    .sm-03 {
+        position: absolute;
+        bottom: 0;
+        left: 33.33%;
+        width: 33.33%;
+    }
+}
+.twitter {
+    padding-bottom: 70px;
+    text-align: center;
+    img {
+        margin-top: 100px;
+        margin-bottom: 20px;
+    }
+    p {
+        padding: 10px 60px;
+        line-height: 1.5;
+    }
+        .h2 {
+        @include font(18px, black);
+        font-weight: 600;
+            font-style: normal;
+    }
+    .span {
+        color: rgba(0, 0, 0, 0.43);
+    }
+}
+.shop {
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    transition: 0.5s;
+    &:hover {
+        background-color: #64c29e;
+    }
+    text-align: center;
+}
+.box {
+    float: left;
+    width: 33.33%;
+    min-height: 534px;
+    cursor: pointer;
+}
+.hover {
+    transition: 0.5s;
+    &:hover {
+         opacity: 0.6;
+    }
+}
+.bt-01 {
+    background-image: url(../img/shop_01.jpg);
+    background-size: cover;
+}
+.btn {
+    float: left;
+    min-height: 534px;
+    width: 50%;
+    transition: 0.5s;
+    
+}
+.btn-left {
+    min-height: 267px;
+    transition: 0.5s;
+    
+}
+.btn-01 {
+    background-image: url(../img/shop_02.jpg);
+    background-size: cover;
+}
+.btn-02 {
+    background-image: url(../img/shop_04.jpg);
+    background-size: cover;
+}
+.btn-03 {
+    background-image: url(../img/shop_04-12.jpg);
+    background-size: cover;
+}
+.btn-04 {
+    background-image: url(../img/shop_05.jpg);
+    background-size: cover;
+}
+.discover {
+    background-color: #282f35;
+    text-align: center;
+    clear: both;
+    a {
+        margin-top: 70px;
+        margin-bottom: 70px;
+        display: inline-block;
+        @include font(14px, white);
+        text-decoration: none;
+        text-transform: uppercase;
+        border: 1px solid white;
+        padding: 15px 35px;
+        transition: 0.5s;
+        &:hover {
+            border: 1px solid #64c29e;
+            color: #64c29e;
+        }
+        
+    }
+}
+.mailing {
+    text-align: center;
+    img {
+        margin: 60px 0 20px 0;
+    }
+    h2 {
+        @include font(24px, rgba(0, 0, 0, 0.55));
+        margin-bottom: 20px;
+    }
+    .input {
+        vertical-align: middle;
+        width: 400px;
+        height: 60px;
+        @include font(20px, rgba(0, 0, 0, 0.55));
+        font-style: italic;
+        border: 1px solid #949494;
+        text-align: center;
+        outline-color: #64c29e;
+    }
+    a {
+        margin-left: 3px;
+        vertical-align: middle;
+        padding: 18px 25px;
+        background-color: #64c29e;
+        text-decoration: none;
+        @include font(24px, white);
+        transition: 0.5s;
+        &:hover {
+            background-color: #6ae2b3;
+        }
+    }
+}
+.mail {
+    margin-bottom: 80px;
+}
+footer {
+    background-color: #f7f7f7;
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .boxes {
+        text-align: center;
+        float: left;
+        width: 33.33%;
+        min-height: 250px;
+    }
+    .red {
+        ul {
+            margin-left: 40%;
+            margin-top: 20%;
+        }
+        li {
+            @include font(18px, rgba(0, 0, 0, 0.52));
+            font-weight: 600;
+            font-style: italic;
+            text-align: justify;
+        }
+        //background-color: red;
+    }
+    .green {
+        .social {
+            a {
+                padding: 0 10px;
+            }
+            margin-top: 20%;
+        }
+        //background-color: green;
+    }
+    .blue {
+        ul {
+            margin-top: 20%;
+        }
+        li {
+            @include font(18px, rgba(0, 0, 0, 0.52));
+            font-weight: 600;
+            font-style: italic;
+            display: inline-block;
+        }
+        //background-color: blue;
+    }
+}
+.mob_nav {
+        visibility: hidden;
+    }
+.hidden {
+    opacity: 0;
+}
+.visible {
+    opacity: 1;
+}
+
+.animsec-left {
+    
+}
